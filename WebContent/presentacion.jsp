@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Esta es la página de presentación</h1>
+	<h1>Java Web</h1>
 	<br>
 	<h3>Esta es la variable request: ${varRequest}</h3>
 	<br>
@@ -16,6 +16,30 @@
 	<h3>Esta es la variable contexto: ${varContext}</h3>
 	
 	<a href="presentacionscope.jsp">ver scope</a>
+	
+	<br>
+	<!-- Scriptlets //funciona como una clase java normal -->
+	<% 
+	int a = 10;
+	int b = 5; 
+	int c = b+a;
+	
+	out.print(c);
+	%>
+	<br>
+	<!-- Expresiones //solo se imprimen variables-->
+	<%=
+	request.getAttribute("varRequest")
+	%>
+	<br>
+	<%=
+	request.getSession().getAttribute("varSesion")
+	%>
+	<br>
+	<%=
+	getServletContext().getAttribute("varContext")
+	%>
+	
 </body>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </html>
