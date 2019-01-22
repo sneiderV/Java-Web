@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Esta es la página de presentación</h1>
+	<h1>¿Cuál es el $Scope?</h1>
 	<br>
 	<h3>Esta es la variable request: ${varRequest}</h3>
 	<br>
@@ -15,7 +15,7 @@
 	<br>
 	<h3>Esta es la variable contexto: ${varContext}</h3>
 	
-	<a href="presentacionscope.jsp">ver scope</a>
+	
 </body>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </html>

@@ -44,11 +44,21 @@ public class MyServlet extends HttpServlet {
 		System.out.println("Ingresamos al método POST de mi Servlet");
 		System.out.println("nombre: "+request.getParameter("nombre"));
 		
-		//doGet(request, response);
+		//opcion request --> scope: solo en el request
+		//variable de petición "name1" es el nombre con la que puedo acceder desde jsp
+		request.setAttribute("varRequest", request.getParameter("nombre"));
+		
+		//opcion: session --> scope: en toda la app
+		request.getSession().setAttribute("varSesion", request.getParameter("nombre"));
+		
+		//opcion: contexto --> scope: mientras este el server 
+		getServletContext().setAttribute("varContext", request.getParameter("nombre"));
 		
 		RequestDispatcher rd;
 		rd = request.getRequestDispatcher("/presentacion.jsp");
 		rd.forward(request, response);
+
+		//doGet(request, response);
 	}
 
 }
